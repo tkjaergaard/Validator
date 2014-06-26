@@ -4,9 +4,9 @@ This is a vanilla javascript class for validating form fields easily.
 
 ## Instroduction
 
-first you have to compile the validator.coffee using [Coffee Script](http://coffeescript.org). documentation on installing and usage can be found there.
+First you have to compile the Validator.coffee using [Coffee Script](http://coffeescript.org). documentation on installing and usage can be found at their website.
 
-To compile Validator you'll have to write this through your terminal.
+To compile Validator you'll have to write this in the terminal.
 
 	coffee -c -b path/to/Validator.coffee
 	
@@ -23,7 +23,7 @@ Validator returns an array with the fields that did not validate.
 
 Each rule is seperated with a `|` (pipe). Some rules requires a parameter seperated by a `:` (colon).
 
-	<form action="/" method="POST">
+	<form action="/" method="POST" id="form">
 		<input name="name" data-validation-rules="required">
 		<input name="age" data-validation-rules="required|numeric">
 	</form>
@@ -70,7 +70,7 @@ Each rule is seperated with a `|` (pipe). Some rules requires a parameter sepera
 * numeric
 * alpha
 * alphanumeric
-* boolean
+* boolean `("0", "1", "true", "false")`
 
 If the `required` rule is not set, the field won't be validated unless it got a value. This means that a field only is validated as failed if the field has a value and dosent match the rule pattern.
 
@@ -84,7 +84,7 @@ To extend Validator you simply need to pass in a functions that follows the rule
 	
 In the rule above the rule `myrule` has been made available for your fields. All rules follows the pattern of `validate{rule}` where `{rule}` is replaced with the name of your rule.
 
-That means that you could now use your custom rule like so:
+That means that you can now use your custom rule like so:
 
 	<input type="text" name="foo" data-validation-rules="required|myrule">
 
