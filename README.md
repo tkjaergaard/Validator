@@ -74,6 +74,12 @@ Each rule is seperated with a `|` (pipe). Some rules requires a parameter sepera
 
 If the `required` rule is not set, the field won't be validated unless it got a value. This means that a field only is validated as failed if the field has a value and dosent match the rule pattern.
 
+## Validating a single input
+
+To validate a single input field you can user the `validateField` method which accepts a input field, like with the form example above.
+
+This method returns boolean agaist the `data-validation-rules` attribute.
+
 ## Extending
 
 To extend Validator you simply need to pass in a functions that follows the rule pattern, like this:
