@@ -11,7 +11,7 @@ class Validator
         for field in fields
             validation = @validateField field
             if(validation)
-                _results.push validation
+                _results.push field
 
         return _results
 
@@ -28,7 +28,9 @@ class Validator
             method = regex.exec(rule)[0]
             validation = this['validate' + method](field, rule)
             if !validation
-                return field
+                return true
+            else
+                return true
 
     validaterequired: (field, rule) ->
         return !!field.value.trim().length;
