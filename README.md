@@ -76,9 +76,9 @@ If the `required` rule is not set, the field won't be validated unless it got a 
 
 ## Validating a single input
 
-To validate a single input field you can user the `validateField` method which accepts a input field, like with the form example above.
+To validate a single input field you can use the `validateField` method which accepts a input field, just like with the form example above.
 
-This method returns boolean agaist the `data-validation-rules` attribute.
+This method returns boolean and validates agaist the `data-validation-rules` attribute.
 
 ## Extending
 
